@@ -29,6 +29,11 @@ sed -i -e '/^IMG_PREFIX:=/i BUILD_DATE := $(shell date +%Y%m%d)' \
 # set ubi to 122M
 # sed -i 's/reg = <0x5c0000 0x7000000>;/reg = <0x5c0000 0x7a40000>;/' target/linux/mediatek/dts/mt7981b-cudy-tr3000-v1-ubootmod.dts
 
+# set ubi to 512M
+# sed -i 's/model = "Cudy TR3000 v1 ubi 112M";/model = "Cudy TR3000 v1 512MB";/' target/linux/mediatek/dts/mt7981b-cudy-tr3000-v1-ubootmod.dts
+# sed -i 's/model = compatible = "cudy,tr3000-v1-ubootmod", "mediatek,mt7981";/compatible = "cudy,tr3000-v1-512mb", "mediatek,mt7981";/' target/linux/mediatek/dts/mt7981b-cudy-tr3000-v1-ubootmod.dts
+# sed -i 's/reg = <0x5c0000 0x7000000>;/reg = <0x5c0000 0x1ea0000>;/' target/linux/mediatek/dts/mt7981b-cudy-tr3000-v1-ubootmod.dts
+
 # Add OpenClash Meta
 mkdir -p files/etc/openclash/core
 
