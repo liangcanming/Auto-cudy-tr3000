@@ -23,7 +23,7 @@ concurrency:
 
 env:
   CCACHE_DIR: /workdir/.ccache
-  CCACHE_MAXSIZE: 6G
+  CCACHE_MAXSIZE: 8G
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-6.6
   REPO_BRANCH: openwrt-24.10-6.6
   FEEDS_CONF: feeds.conf.default
@@ -235,7 +235,7 @@ jobs:
 
           ## 🚧 Notice
 
-          该固件为 112M 大分区固件，请配合本仓库的 uboot 使用
+          该固件为 512M 大存闪固件，请配合本仓库的 uboot 使用
 
           ---
 
