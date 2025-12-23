@@ -90,15 +90,15 @@ jobs:
           cd openwrt
           $GITHUB_WORKSPACE/$DIY_P1_SH
           # 创建必要的目录结构
-          mkdir -p immortalwrt-mt798x-6.6/target/linux/mediatek/dts/
+          mkdir -p openwrt/target/linux/mediatek/dts/
           # 复制DTS文件
-          cp target/linux/mediatek/dts/mt7981b-cudy-tr3000-v1-512mb.dts openwrt/target/linux/mediatek/dts/
+          cp custom/target/linux/mediatek/dts/mt7981b-cudy-tr3000-v1-512mb.dts openwrt/target/linux/mediatek/dts/
           echo "DTS文件已复制"
         # yamllint enable rule:line-length
 
       - name: Update filogic.mk with 512MB device definition
         run: |
-          cd immortalwrt
+          cd openwrt
           # 在filogic.mk中追加512MB设备定义
           cat >> target/linux/mediatek/image/filogic.mk << 'EOF'
 
