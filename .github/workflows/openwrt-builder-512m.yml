@@ -90,9 +90,9 @@ jobs:
           cd openwrt
           $GITHUB_WORKSPACE/$DIY_P1_SH
           # 创建必要的目录结构
-          mkdir -p immortalwrt/target/linux/mediatek/dts/
+          mkdir -p immortalwrt-mt798x-6.6/target/linux/mediatek/dts/
           # 复制DTS文件
-          cp custom/target/linux/mediatek/dts/mt7981b-cudy-tr3000-v1-512mb.dts immortalwrt/target/linux/mediatek/dts/
+          cp custom/target/linux/mediatek/dts/mt7981b-cudy-tr3000-v1-512mb.dts immortalwrt-mt798x-6.6/target/linux/mediatek/dts/
           echo "DTS文件已复制"
         # yamllint enable rule:line-length
 
